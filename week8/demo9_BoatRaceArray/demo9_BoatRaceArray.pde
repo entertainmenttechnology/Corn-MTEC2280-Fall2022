@@ -39,18 +39,17 @@ class Boat {
   }
 }
 
-
 void setup(){
  size(500, 500);
- for(int i =0; i<boats.length-1; i++){
-   boats[i] = new Boat("team " + i, color(random(255),random(255),random(255)), random(0,width), random(0,height), random(0,8));
+ for(int i =0; i<boats.length; i++){
+   boats[i] = new Boat("team " + (i+1), color(random(255),random(255),random(255)), random(0,width), random(0,height), random(0,8));
  }
  rectMode(CENTER);
 }
 
 void draw(){
   background(125);
-  for(int i =0; i<boats.length-1;i++){
+  for(int i =0; i<boats.length;i++){
     boats[i].move();
     boats[i].display();
   }
